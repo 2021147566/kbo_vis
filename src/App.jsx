@@ -20,7 +20,7 @@ export default function App() {
       // 0.5초 후 Sidebar 컴포넌트 재생성
       setTimeout(() => {
         setSidebarKey(prev => prev + 1);
-      }, 100);
+      }, 500);
     }
   };
 

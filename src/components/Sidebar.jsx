@@ -685,7 +685,7 @@ export default function Sidebar({ collapsed }) {
             <div className="pitcher-charts">
               {/* 1행: 2열 */}
               <div className="chart-row two-cols">
-                <div className="chart-placeholder">스트라이크존 히트맵
+                <div className="chart-placeholder">금일 스트라이크존 히트맵
                   <StrikeZoneHeatmap csvUrl="/kbo_vis/data/20250603WOLT02025.csv" />
                 </div>
                 <div className="chart-placeholder">현재 구속 (km/h)
@@ -695,21 +695,21 @@ export default function Sidebar({ collapsed }) {
 
               {/* 2행: 1열 */}
               <div className="chart-row">
-                <div className="chart-placeholder">구종 피칭 결과 분포
+                <div className="chart-placeholder">금일 구종 피칭 결과 분포
                   <PitchResultDistributionChart />
                 </div>
               </div>
 
               {/* 3행: 1열 */}
               <div className="chart-row">
-                <div className="chart-placeholder count-pitch">동일 카운트 시 구종 분포
+                <div className="chart-placeholder count-pitch">시즌 중 동일 카운트 시 구종 분포
                   <CountPitchDistributionStatic  />
                 </div>
               </div>
 
               {/* 4행: 1열 */}
               <div className="chart-row">
-                <div className="chart-placeholder">풀 카운트 시 삼진/볼넷 확률
+                <div className="chart-placeholder">시즌 중 풀카운트 투구 결과
                   <FullCountOutcomeRatioChart />
                 </div>
               </div>
