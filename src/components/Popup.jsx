@@ -16,7 +16,7 @@ const WinProbChart = ({ visible, onClose }) => {
   useEffect(() => {
     if (!visible) return;
 
-    fetch("/data/20250603WOLT02025.csv")
+    fetch("/kbo_vis/data/20250603WOLT02025.csv")
       .then((res) => res.blob())
       .then((blob) => new Promise((resolve) => {
         const reader = new FileReader();

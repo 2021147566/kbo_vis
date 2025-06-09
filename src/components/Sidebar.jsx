@@ -563,16 +563,9 @@ function PAResultStackedBar({ data }) {
   return <ReactECharts option={option} style={{ height: '150px' }} />;
 }
 
-
-
-
-
-
-
-
 export default function Sidebar({ collapsed }) {
 
-  const [chartMode, setChartMode] = useState('pitcher');  // 'pitcher' or 'batter'
+  const [chartMode, setChartMode] = useState('batter');  // 'pitcher' or 'batter'
   const [autoUpdate, setAutoUpdate] = useState(true);
   const tabs = ['전력','라인업','중계','영상','득점','현재타석','티빙톡','기록'];
   const innings = Array.from({ length: 9 }, (_, i) => i + 1);
@@ -663,7 +656,7 @@ export default function Sidebar({ collapsed }) {
           <div className="player-versus">
             <div className="player-block">
               <img
-                src="/images/ljm.JPG"
+                src="/kbo_vis/images/ljm.JPG"
                 alt="김연주"
                 className={chartMode === 'pitcher' ? 'player-photo active' : 'player-photo'}
                 onClick={() => setChartMode('pitcher')}
@@ -677,7 +670,7 @@ export default function Sidebar({ collapsed }) {
 
             <div className="player-block">
               <img
-                src="/images/ydh.JPG"
+                src="/kbo_vis/images/ydh.JPG"
                 alt="윤동희"
                 className={chartMode === 'batter' ? 'player-photo active' : 'player-photo'}
                 onClick={() => setChartMode('batter')}
@@ -693,7 +686,7 @@ export default function Sidebar({ collapsed }) {
               {/* 1행: 2열 */}
               <div className="chart-row two-cols">
                 <div className="chart-placeholder">스트라이크존 히트맵
-                  <StrikeZoneHeatmap csvUrl="/data/20250603WOLT02025.csv" />
+                  <StrikeZoneHeatmap csvUrl="/kbo_vis/data/20250603WOLT02025.csv" />
                 </div>
                 <div className="chart-placeholder">현재 구속 (km/h)
                   <SpeedBarChartECharts speedData={speedData} />
@@ -732,12 +725,14 @@ export default function Sidebar({ collapsed }) {
                 </div>
               </div>
               <div className="chart-row">
-                <div className="chart-placeholder">이전 3 경기 결과
+                <div className="chart-placeholder">이전 3 경기 PA 결과
                   <PAResultStackedBar data={pa_data} />
                 </div>
               </div>
               <div className="chart-row">
-                <div className="chart-placeholder">최근 10 PA 출루율</div>
+                <div className="chart-placeholder">이전 3 경기 출루율
+                  <BattingGauge value={0.583} title="출루율" />
+                </div>
               </div>
             </div>
           )}

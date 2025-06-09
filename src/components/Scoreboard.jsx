@@ -10,7 +10,7 @@ export default function Scoreboard({ onShowPopup }) {
         {/* 키움 팀 정보 */}
         <div className="team-info">
           <img
-            src="/images/kw.PNG"
+            src="/kbo_vis/images/kw.PNG"
             alt="키움"
             className="team-logo-big"
           />
@@ -54,7 +54,7 @@ export default function Scoreboard({ onShowPopup }) {
         </div>
         <div className="team-info">
             <img
-                src="/images/lt.PNG"
+                src="/kbo_vis/images/lt.PNG"
                 alt="Lotte"
                 className="team-logo-big"
             />
@@ -99,12 +99,12 @@ export default function Scoreboard({ onShowPopup }) {
         <div className="match-card">
           <div className="match-status">경기 종료</div>
           <div className="team-row">
-            <img src="/images/lt.PNG" alt="롯데" className="team-logo" />
+            <img src="/kbo_vis/images/lt.PNG" alt="롯데" className="team-logo" />
             <span className="team-name">롯데</span>
             <span className="team-score">3</span>
           </div>
           <div className="team-row">
-            <img src="/images/ss.PNG" alt="삼성" className="team-logo" />
+            <img src="/kbo_vis/images/ss.PNG" alt="삼성" className="team-logo" />
             <span className="team-name">삼성</span>
             <span className="team-score">9</span>
           </div>
@@ -113,12 +113,12 @@ export default function Scoreboard({ onShowPopup }) {
         <div className="match-card">
           <div className="match-status">경기 종료</div>
           <div className="team-row">
-            <img src="/images/ds.PNG" alt="두산" className="team-logo" />
+            <img src="/kbo_vis/images/ds.PNG" alt="두산" className="team-logo" />
             <span className="team-name">두산</span>
             <span className="team-score">2</span>
           </div>
           <div className="team-row">
-            <img src="/images/kt.PNG" alt="KT" className="team-logo" />
+            <img src="/kbo_vis/images/kt.PNG" alt="KT" className="team-logo" />
             <span className="team-name">KT</span>
             <span className="team-score">12</span>
           </div>
@@ -127,12 +127,12 @@ export default function Scoreboard({ onShowPopup }) {
         <div className="match-card">
           <div className="match-status">경기 종료</div>
           <div className="team-row">
-            <img src="/images/nc.PNG" alt="NC" className="team-logo" />
+            <img src="/kbo_vis/images/nc.PNG" alt="NC" className="team-logo" />
             <span className="team-name">NC</span>
             <span className="team-score">5</span>
           </div>
           <div className="team-row">
-            <img src="/images/ssg.PNG" alt="SSG" className="team-logo" />
+            <img src="/kbo_vis/images/ssg.PNG" alt="SSG" className="team-logo" />
             <span className="team-name">SSG</span>
             <span className="team-score">6</span>
           </div>
@@ -141,12 +141,12 @@ export default function Scoreboard({ onShowPopup }) {
         <div className="match-card">
           <div className="match-status">경기 종료</div>
           <div className="team-row">
-            <img src="/images/hh.PNG" alt="한화" className="team-logo" />
+            <img src="/kbo_vis/images/hh.PNG" alt="한화" className="team-logo" />
             <span className="team-name">한화</span>
             <span className="team-score">1</span>
           </div>
           <div className="team-row">
-            <img src="/images/lg.PNG" alt="LG" className="team-logo" />
+            <img src="/kbo_vis/images/lg.PNG" alt="LG" className="team-logo" />
             <span className="team-name">LG</span>
             <span className="team-score">3</span>
           </div>
@@ -155,12 +155,12 @@ export default function Scoreboard({ onShowPopup }) {
         <div className="match-card">
           <div className="match-status">경기 종료</div>
           <div className="team-row">
-            <img src="/images/kw.PNG" alt="키움" className="team-logo" />
+            <img src="/kbo_vis/images/kw.PNG" alt="키움" className="team-logo" />
             <span className="team-name">키움</span>
             <span className="team-score">3</span>
           </div>
           <div className="team-row">
-            <img src="/images/kia.PNG" alt="KIA" className="team-logo" />
+            <img src="/kbo_vis/images/kia.PNG" alt="KIA" className="team-logo" />
             <span className="team-name">KIA</span>
             <span className="team-score">3</span>
           </div>

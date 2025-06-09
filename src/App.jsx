@@ -9,10 +9,19 @@ import './styles/main.css';
 
 export default function App() {
   const [showSidebar, setShowSidebar] = useState(true);
-  const [showPopup, setShowPopup] = useState(false); // ✅ popup 상태 추가
+  const [sidebarKey, setSidebarKey] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
 
   const toggleSidebar = () => {
-    setShowSidebar(prev => !prev);
+    const newState = !showSidebar;
+    setShowSidebar(newState);
+
+    if (newState) {
+      // 0.5초 후 Sidebar 컴포넌트 재생성
+      setTimeout(() => {
+        setSidebarKey(prev => prev + 1);
+      }, 50);
+    }
   };
 
   return (
@@ -24,11 +33,14 @@ export default function App() {
           style={{ width: showSidebar ? '70%' : '100%' }}
         >
           <Player />
-          <Scoreboard onShowPopup={() => setShowPopup(true)} /> {/* ✅ 전달 */}
+          <Scoreboard onShowPopup={() => setShowPopup(true)} />
         </div>
-        {showSidebar && <Sidebar />}
+
+        {/* ✅ Sidebar는 열릴 때 0.5초 후 새로 렌더링됨 */}
+        {showSidebar && <Sidebar key={sidebarKey} />}
       </div>
-      <WinProbChart visible={showPopup} onClose={() => setShowPopup(false)} /> {/* ✅ 팝업 표시 */}
+
+      <WinProbChart visible={showPopup} onClose={() => setShowPopup(false)} />
     </>
   );
 }

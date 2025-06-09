@@ -1,7 +1,8 @@
 // src/components/Header.jsx
 import React from 'react';
 import '../styles/header.css';
-
+import kbologo from '/images/kbo_logo.JPG'
+import tvinglogo from '/images/tving_logo.png';
 export default function Header({ onToggleSidebar }) {
   return (
     <div className="header tving-header">
@@ -9,7 +10,7 @@ export default function Header({ onToggleSidebar }) {
       <div className="tving-header-top">
         <div className="tving-header-top-left">
           <img
-            src="/images/tving_logo.png"
+            src={tvinglogo}
             alt="TVing Logo"
             className="tving_logo"
           />
@@ -27,7 +28,7 @@ export default function Header({ onToggleSidebar }) {
       <div className="tving-header-bottom">
         <div className="tving-header-bottom-left">
           <img
-            src="/images/kbo_logo.JPG"
+            src={kbologo}
             alt="KBO Logo"
             className="kbo_logo"
           />
